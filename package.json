@@ -1,12 +1,12 @@
 {
-  "name": "insight-bitcore",
+  "name": "insight-onix-ui",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the bitcoin network and build your own services with it.",
   "version": "0.2.5",
   "author": {
     "name": "Ryan X Charles",
     "email": "ryan@bitpay.com"
   },
-  "repository": "git://github.com/bitpay/insight.git",
+  "repository": "git://github.com/jestevez/insight-onix-ui.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -27,12 +27,16 @@
     {
       "name": "Juan Ignacio Sosa Lopez",
       "email": "bechilandia@gmail.com"
+    }, 
+    {
+      "name": "Jose Luis Estevez",
+      "email": "jose.estevez.prieto@gmail.com"
     }
   ],
   "bugs": {
-    "url": "https://github.com/bitpay/insight/issues"
+    "url": "https://github.com/jestevez/insight-onix-ui/issues"
   },
-  "homepage": "https://github.com/bitpay/insight",
+  "homepage": "https://github.com/jestevez/insight-onix-ui",
   "license": "MIT",
   "keywords": [
     "insight",
@@ -43,10 +47,10 @@
     "front-end"
   ],
   "scripts": {
-    "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-bitcore-api"
+    "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-onixcoin-api"
   },
   "dependencies": {
-    "insight-bitcore-api": ">0.2.10"
+    "insight-onix-api": "0.2.0"
   },
   "devDependencies": {
     "bower": "~1.2.8",
@@ -62,3 +66,4 @@
     "grunt-angular-gettext": "^0.2.15"
   }
 }
+    

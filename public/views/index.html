@@ -7,21 +7,21 @@
     <div id="home" class="row">
       <div class="col-xs-12 col-md-8">
 
-        <div data-ng-include src="'/views/includes/search.html'"></div> 
+        <div id="search-form-mobile" class="visible-xs" data-ng-include src="'/views/includes/search.html'"></div>
 
-        <h1>Latest Blocks</h1>
+        <h1 translate>Latest Blocks</h1>
         <table class="table table-hover table-striped" style="table-layout: fixed">
           <thead>
             <tr>
-              <th>Height</th>
-              <th>Age</th>
-              <th class="text-right"><span class="ellipsis">Transactions</span></th>
-              <th class="text-right hidden-xs"><span class="ellipsis">Mined by</span></th>
-              <th class="text-right">Size</th>
+              <th translate>Height</th>
+              <th translate>Age</th>
+              <th class="text-right"><span class="ellipsis" translate>Transactions</span></th>
+              <th class="text-right hidden-xs"><span class="ellipsis" translate>Mined by</span></th>
+              <th class="text-right" translate>Size</th>
             </tr>
           </thead>
           <tbody>
-          <tr data-ng-show="!blocks.length"><td colspan="4">Waiting for blocks...</td></tr>
+          <tr data-ng-show="!blocks.length"><td colspan="4" translate>Waiting for blocks...</td></tr>
           <tr class="fader" data-ng-repeat='b in blocks'>
             <td>
               <a href="/block/{{b.hash}}">{{b.height}}</a>
@@ -34,46 +34,46 @@
           </tbody>
         </table>
         <div class="btn-more">
-          <a href="/blocks" class="btn btn-default">See all blocks</a>
+          <a href="/blocks" class="btn btn-default" translate>See all blocks</a>
         </div>
 
-        <h2>Latest Transactions</h2>
+        <h2 translate>Latest Transactions</h2>
 
         <table class="table table-hover table-striped" style="table-layout: fixed;">
           <thead>
             <tr>
               <th>Hash</th>
-              <th class="text-right">Value Out</th>
+              <th class="text-right" translate>Value Out</th>
             </tr>
           </thead>
           <tbody>
-          <tr data-ng-show="!txs.length"><td colspan="3">Waiting for transactions...</td></tr>
+          <tr data-ng-show="!txs.length"><td colspan="3" translate>Waiting for transactions...</td></tr>
           <tr class="fader" data-ng-repeat='tx in txs'>
             <td>
               <a class="ellipsis" href="/tx/{{tx.txid}}">{{tx.txid}}</a>
             </td>
-            <td class="text-right"><span class="ellipsis">{{tx.valueOut}} BTC</span></td>
+            <td class="text-right"><span class="ellipsis">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' BTC'}}</span></td>
           </tr>
           </tbody>
         </table>
 
       </div>
 
-      <div class="col-xs-12 col-md-4 col-gray">
-        <h2> About </h2>
-        <p><strong>insight</strong>  is an <a href="http://live.insight.is/" target="_blank">open-source Bitcoin blockchain explorer</a> with complete REST
-and websocket APIs that can be used for writing web wallets and other apps 
-that need more advanced blockchain queries than provided by bitcoind RPC. 
-Check out the <a href="http://github.com/bitpay/insight" target="_blank">source code</a>.</p>
-        <p><strong>insight</strong> is still in development, so be sure to report any bugs and provide feedback for improvement at our <a href="https://github.com/bitpay/insight/issues" target="_blank">github issue tracker</a>.</p>
-        <div id="powered" class="row">
-          <div class="powered-text">
-            <small class="text-muted">Powered by</small>
-          </div>
-          <a href="http://bitcore.io" target="_blank" class="bitcore" title="Bitcore"></a>
-          <a href="http://angularjs.org" target="_blank" class="angularjs" title="AngularJS"></a>
-          <a href="https://code.google.com/p/leveldb/" target="_blank" class="leveldb" title="LevelDB"></a>
-          <a href="http://nodejs.org" target="_blank" class="nodejs" title="NodeJs"></a>
+    <div class="col-xs-12 col-md-4 col-gray">
+
+    <h2>Onixcoin.info</h2>
+
+    <p>Explorer of blocks for the currency cryptocurrency Onixcoin.</p>
+    <img class="img-responsive" src="/img/onixcoin.png" alt="Onixcoin" style="width:144px;margin: 0 auto;height:144px;">
+    <br>
+    
+	<p>This explorer is not directly linked to the Onixcoin, it is developed by collaborators who want to help the Venezuelan currency to gain strength.</p>
+	<p>If you want to help to maintain this site you can donate some Onix to the developers</p>
+	<p class="text-center"><code>XTo7XEAgPapkgJkgH6iR31J4cHBxwTgREe</code></p>
+	
+		
+        <p>Using <a href="http://github.com/bitpay/insight" target="_blank">insight</a> open-source Onixcoin blockchain explorer, adapted and hosted by <a target="_blank" href="https://www.araguaneybits.com/">AraguaneyBits</a></p>
+
         </div>
       </div> <!-- END OF COL-3 -->
     </div>
