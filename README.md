@@ -6,7 +6,7 @@ front-end and LevelDB for storage.
 
 Check some screenshots and more details at [insight's project homepage](http://insight.is/).
 
-*Insight* project is now splitted in two repositories. One for the [API](https://github.com/bitpay/insight-api) and for the front-end. This repository is for the front-end, which will install the API as a NPM dependency.
+*Insight* project is now splitted in two repositories. One for the [API](https://github.com/jestevez/insight-onix-api) and for the front-end. This repository is for the front-end, which will install the API as a NPM dependency.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Check some screenshots and more details at [insight's project homepage](http://i
 
   To install Insight, clone the main repository:
 
-    $ git clone https://github.com/bitpay/insight.git && cd insight
+    $ git clone https://github.com/jestevez/insight-onix-ui.git && cd insight
 
   Install dependencies:
 
@@ -34,7 +34,7 @@ Check some screenshots and more details at [insight's project homepage](http://i
     http://localhost:3001
 
   If *insight* reports problems connecting to **bitcoind** please check the CONFIGURATION section of 
-  [insight-api README](https://github.com/bitpay/insight-api/blob/master/README.md). To set the 
+  [insight-onix-api README](https://github.com/jestevez/insight-onix-api/blob/insight-onix-api/README.md). To set the 
   environment variables run something like:
   
      $ INSIGHT_NETWORK=livenet BITCOIND_USER=user BITCOIND_PASS=pass INSIGHT_PUBLIC_PATH=public  npm start
@@ -43,7 +43,7 @@ Check some screenshots and more details at [insight's project homepage](http://i
   Please note that the app will need to sync its internal database
   with the blockchain state, which may take some time. You can check
   sync progress from within the web interface. More details about that process
-  on [insight-api README](https://github.com/bitpay/insight-api/blob/master/README.md). 
+  on [insight-onix-api README](https://github.com/jestevez/insight-onix-api/blob/insight-onix-api/README.md). 
   
   
 ## Nginx Setup
@@ -74,9 +74,9 @@ $ grunt
 ```
 
 
-In case you are developing *insight* and *insight-api* toghether, you can do the following:
+In case you are developing *insight* and *insight-onix-api* toghether, you can do the following:
 
-* Install insight and insight-api on the same path ($IROOT)
+* Install insight and insight-onix-api on the same path ($IROOT)
 
 ```
   $ cd $IROOT/insight
@@ -86,19 +86,19 @@ In case you are developing *insight* and *insight-api* toghether, you can do the
 in other terminal:
 
 ```
-  $ cd $IROOT/insight-api 
+  $ cd $IROOT/insight-onix-api 
   $ ln -s ../insight/public
   $ INSIGHT_PUBLIC_PATH=public node insight.js 
 ```
 
 
 ``` 
-INSIGHT_PUBLIC_PATH=insight/public  grunt
+INSIGHT_PUBLIC_PATH=insight-onix-ui/public  grunt
 ```
 
-at insight-api's home path (edit the path according your setup).
+at insight-onix-api's home path (edit the path according your setup).
 
-**also** in the insight-api path. (So you will have to grunt process running, one for insight and one for insight-api).
+**also** in the insight-onix-api path. (So you will have to grunt process running, one for insight and one for insight-onix-api).
 
 
 ## Multilanguage support
@@ -130,11 +130,11 @@ compile***.
 
 ## Note
 
-For more details about the *insight API* configs and end-point, just go to [insight API github repository](https://github.com/bitpay/insight-api) or read the [documentation](https://github.com/bitpay/insight-api/blob/master/README.md)
+For more details about the *insight API* configs and end-point, just go to [insight API github repository](https://github.com/jestevez/insight-onix-api) or read the [documentation](https://github.com/jestevez/insight-onix-api/blob/insight-onix-api/README.md)
 
 ## Contribute
 
-Contributions and suggestions are welcomed at [insight github repository](https://github.com/bitpay/insight).
+Contributions and suggestions are welcomed at [insight github repository](https://github.com/jestevez/insight-onix-ui).
 
 
 ## License
